@@ -1,27 +1,43 @@
-# AngularTesting
+# Angular Testing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+## Tiempo
 
-## Development server
+Las pruebas consumen mucho tiempo,
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Que utiliza Angular para el Testing
 
-## Code scaffolding
+Angular nativamente utiliza Jasmine, que es un framework que soporta
+los tres tipos de pruebas automaticas descritas abajo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pruebas automaticas
 
-## Build
+Para que sirven?
+Para probar el comportamiento distintos paths que un usuario puede tomar
+dentro de la aplicacion
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ventajas
+Ayuda a encontrar errores
+Permite probar codigo escrito por otros devs
+Detecta errores antes de que ocurran en produccion
+Genera codigo mas limpio, reportes y estadisticas
 
-## Running unit tests
+Desventajas
+No garantiza estar libre de bugs
+Probar el codigo es un trabajo mas largo que desarrollar la app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Que debo probar?
+Se recomienda probar los paths criticos/principales del sistema, para
+ahorrar tiempo
 
-## Running end-to-end tests
+Que tipo de pruebas existen?
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Unitarias
+Toma metodos aislados en un componente de la app y prueba su comportamiento,
+sin presencia de recursos externos (llamadas a una API u otro componente/servicio)
 
-## Further help
+Integracion
+Toma 2 o mas componentes/elementos y analiza su interaccion
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+E2E (End to End)
+Refiere a tomar un path especifico dentro de la app y testear el comportamiento
+de la misma durante todo el recorrido
