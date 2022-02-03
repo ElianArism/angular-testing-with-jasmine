@@ -1,16 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { By } from '@angular/platform-browser';
+import { RouterLinkWithHref, RouterOutlet } from '@angular/router';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      // For routes and router outlet
+      imports: [RouterTestingModule],
+      declarations: [AppComponent],
+      // To avoid problems of multiple component declarations in different modules
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
 
@@ -20,16 +22,15 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-testing'`, () => {
+  it('router-outlet should exists', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-testing');
-  });
+    const routOutlet = fixture.debugElement.query(
+      /**
+       * To select directives
+       */
+      By.directive(RouterOutlet)
+    );
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-testing app is running!');
+    expect(routOutlet).not.toBeNull();
   });
 });
