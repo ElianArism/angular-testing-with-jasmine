@@ -1,11 +1,11 @@
 import { Player } from './class';
-describe('Testing of Classes', () => {
+describe('Class', () => {
   /**
    * Testing lifecycle
-      beforeAll()
-      beforeEach()
-      afterAll()
-      afterEach()
+      beforeAll()   => before all tests
+      beforeEach()  => before each test
+      afterAll()    => after all tests
+      afterEach()   => after each test
    */
 
   let player: Player;
@@ -28,8 +28,3 @@ describe('Testing of Classes', () => {
     expect(res).toBe(0);
   });
 });
-
-/**
- * Para ejecutar metricas de que tan cubierto se encuentra el codigo por pruebas
- * se corre: ng test --code-coverage
- */

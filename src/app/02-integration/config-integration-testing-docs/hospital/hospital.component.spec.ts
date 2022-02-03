@@ -8,13 +8,13 @@ describe('HospitalComponent', () => {
 
   /**
    * Init without webpack
+    beforeEach(async () => {
+      await TestBed.configureTestingModule({
+        declarations: [HospitalComponent],
+      });
+    .compileComponents(); to use without webpack
+    });
    */
-  // beforeEach(async () => {
-  //   await TestBed.configureTestingModule({
-  //     declarations: [HospitalComponent],
-  //   });
-  // .compileComponents(); to use without webpack
-  // });
 
   /**
    * Init

@@ -1,13 +1,13 @@
 import { message } from './string';
 /**
-  * Para agrupar pruebas
+  * Group tests
   * describe(); 
    
-  * Para crear/realizar una prueba
+  * Define test
   * it(); 
  */
 
-describe('Tests of Strings', () => {
+describe('Strings', () => {
   it('It should return a string', () => {
     const mess = message('Elian');
     expect(typeof mess).toBe('string');

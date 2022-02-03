@@ -1,5 +1,5 @@
 import { Player2 } from './Player2';
-describe('Event Emitter testing', () => {
+describe('Event Emitter', () => {
   let player: Player2;
 
   beforeEach(() => (player = new Player2()));

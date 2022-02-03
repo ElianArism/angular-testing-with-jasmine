@@ -13,7 +13,7 @@ describe('Doctor Component', () => {
 
   beforeEach(() => {
     /**
-     * Config to ompile with angular for can access to component.html and component.scss
+     * Config to compile with angular for can access to component.html and component.scss
      * TestBed is like any module but for testing
      */
     TestBed.configureTestingModule({

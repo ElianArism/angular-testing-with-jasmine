@@ -2,13 +2,18 @@ import { DoctorsComponent } from './medicos.component';
 import { DoctorsService } from './doctors.service';
 import { from, of, throwError } from 'rxjs';
 
-describe('MedicosComponent', () => {
+describe('Doctors Component', () => {
   let component: DoctorsComponent;
   const service = new DoctorsService(null);
 
   beforeEach(() => {
     component = new DoctorsComponent(service);
   });
+
+  /**
+   * The spies are useful to simulate a service/function with fake data.
+   * When a service is spied to return fake data, it is called Mock
+   */
 
   it('It should load doctors', () => {
     // spy to mock the service

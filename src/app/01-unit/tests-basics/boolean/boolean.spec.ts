@@ -1,5 +1,5 @@
 import { userLogged } from './boolean';
-describe('Testing of Booleans', () => {
+describe('Boolean', () => {
   it('It should return true', () => {
     const res = userLogged();
     expect(res).toBeTruthy();

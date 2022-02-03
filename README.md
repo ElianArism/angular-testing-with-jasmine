@@ -1,43 +1,30 @@
-# Angular Testing
+# Angular Testing With Jasmine :rocket:
 
-## Tiempo
+## About This project
 
-Las pruebas consumen mucho tiempo,
+This project has 3 folders
 
-## Que utiliza Angular para el Testing
+- Unit
+  Includes basic and intermediate unit tests without using any extra dependency
 
-Angular nativamente utiliza Jasmine, que es un framework que soporta
-los tres tipos de pruebas automaticas descritas abajo.
+- Integration
+  Includes env configuration, basic and intermediate integration tests.
+  Inside each folder are the used resources
 
-## Pruebas automaticas
+- Advanced
+  Advanced is a component with more advanced integration tests
 
-Para que sirven?
-Para probar el comportamiento distintos paths que un usuario puede tomar
-dentro de la aplicacion
+## Steps
 
-Ventajas
-Ayuda a encontrar errores
-Permite probar codigo escrito por otros devs
-Detecta errores antes de que ocurran en produccion
-Genera codigo mas limpio, reportes y estadisticas
+1. `npm i`
+2. `ng test`
 
-Desventajas
-No garantiza estar libre de bugs
-Probar el codigo es un trabajo mas largo que desarrollar la app
+## Code Coverage
 
-Que debo probar?
-Se recomienda probar los paths criticos/principales del sistema, para
-ahorrar tiempo
+Run `ng test --code-coverage`, then go to the directory called coverage (at the root of the project) and open in your browser `index.html`
 
-Que tipo de pruebas existen?
+## Docs
 
-Unitarias
-Toma metodos aislados en un componente de la app y prueba su comportamiento,
-sin presencia de recursos externos (llamadas a una API u otro componente/servicio)
-
-Integracion
-Toma 2 o mas componentes/elementos y analiza su interaccion
-
-E2E (End to End)
-Refiere a tomar un path especifico dentro de la app y testear el comportamiento
-de la misma durante todo el recorrido
+(Angular Testing)[https://angular.io/guide/testing]
+(Jasmine Docs)[https://jasmine.github.io/pages/docs_home.html]
+(Test Suites With Jasmine)[https://testing-angular.com/test-suites-with-jasmine/]
